@@ -18,14 +18,14 @@ En la pestaña Bot, en Privileged Gateway Intents, activa:
 
 **Linux / macOS:**
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv cp
+source cp/bin/activate
 ```
 
 **Windows:**
 ```bash
-python -m venv venv
-venv\Scripts\activate
+python -m venv cp
+cp\Scripts\activate
 ```
 
 ## 4. Instalar dependencias
