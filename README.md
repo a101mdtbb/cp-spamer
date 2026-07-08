@@ -34,7 +34,7 @@ cp\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## 5. Ejecutar el bot
+## 5. Ejecutar
 
 ```bash
 python3 cp.py
