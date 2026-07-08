@@ -14,27 +14,7 @@ En la pestaña Bot, en Privileged Gateway Intents, activa:
 - Server Members Intent
 - Message Content Intent
 
-## 3. Invitar el bot al servidor
-
-1. Pestaña OAuth2 > URL Generator
-2. Scopes: `bot`
-3. Selecciona los permisos necesarios
-4. Abre la URL generada y elige el servidor
-
-## 4. Clonar el repositorio
-
-```bash
-git clone <URL-de-este-repositorio>
-cd <nombre-de-la-carpeta>
-```
-
-## 5. Crear y activar entorno virtual
-
-**Windows:**
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
+## 3. Crear y activar entorno virtual
 
 **Linux / macOS:**
 ```bash
@@ -42,16 +22,22 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-## 6. Instalar dependencias
+**Windows:**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+## 4. Instalar dependencias
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 7. Ejecutar el bot
+## 5. Ejecutar el bot
 
 ```bash
-python cp.py
+python3 cp.py
 ```
 
 Cuando lo pida, pega el token del paso 1.
