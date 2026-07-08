@@ -1,4 +1,4 @@
-<h1 style="font-size: 40px;">CP SPAMER</h1>
+<h1 style="font-size: 48px;">CP SPAMER</h1>
 
 ## Configuración
 
