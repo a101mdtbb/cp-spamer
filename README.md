@@ -1,4 +1,4 @@
-# Configuración del Bot de Discord
+# Configuración
 
 ## 1. Crear la aplicación y el bot
 
