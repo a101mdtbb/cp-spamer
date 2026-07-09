@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=CP SPAMER
+Comment=Discord bot para spamear mensajes
+Categories=Network;
+Type=Application
+Exec=cp-spamer
+Icon=cp-spamer
+Terminal=false

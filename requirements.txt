@@ -1,2 +1,4 @@
-discord.py
-colorama
+discord.py>=2.7.0,<3.0.0
+colorama>=0.4.6,<1.0.0
+# Para la interfaz GTK (cp-gtk.py) se requiere PyGObject.
+# En Linux: sudo apt install python3-gi  /  En Arch: python-gobject
