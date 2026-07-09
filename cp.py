@@ -37,31 +37,31 @@ def display_logo():
 
 def display_status(connected):
     if connected:
-        print(Fore.GREEN + "Status: Connected")
+        print(Fore.GREEN + "Estado: Connectado")
     else:
-        print(Fore.RED + "Status: Disconnected")
+        print(Fore.RED + "Estado: Desconnectado")
 
 def token_management():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print(Fore.CYAN + "Welcome to the bot token management!\n")
-    print("1. Set new token")
-    print("2. Load previous token")
+    print(Fore.CYAN + "Bienvenido a CP SPAMER!\n")
+    print("1. Agregar un token nuevo")
+    print("2. Cargar tokem anterior")
     print()
 
-    choice = input(Fore.YELLOW + "Choose an option (1, 2): ")
+    choice = input(Fore.YELLOW + "elige una opcion (1, 2): ")
 
     if choice == "1":
-        new_token = input(Fore.GREEN + "Enter the new token: ")
+        new_token = input(Fore.GREEN + "ingresa tu nuevo token: ")
         save_token(new_token)
-        print(Fore.GREEN + "Token successfully set!")
+        print(Fore.GREEN + "Token guardado conrrectamente!")
         return new_token
     elif choice == "2":
         token = load_token()
         if token:
-            print(Fore.GREEN + f"Previous token loaded: {token}")
+            print(Fore.GREEN + f"Token anterior cargado: {token}")
             return token
         else:
-            print(Fore.RED + "No token found.")
+            print(Fore.RED + "Token no encontrado.")
             return None
     else:
         print(Fore.RED + "Invalid choice. Please try again.")
@@ -101,11 +101,11 @@ async def on_ready():
 
     try:
         await bot.tree.sync()  
-        print(Fore.GREEN + "Commands successfully synchronized globally.")
+        print(Fore.GREEN + "sincronizacion finalizada.")
         print(Fore.YELLOW + "Listo...")
     except Exception as e:
         display_status(False)
-        print(Fore.RED + f"Error during synchronization: {e}")
+        print(Fore.RED + f"Error durante la sincronizacion: {e}")
 
 if __name__ == "__main__":
     TOKEN = token_management()
@@ -113,14 +113,14 @@ if __name__ == "__main__":
         try:
             bot.run(TOKEN)
         except discord.errors.LoginFailure:
-            print(Fore.RED + "Can't connect to token. Please check your token.")
-            input(Fore.YELLOW + "Press Enter to go back to the menu...")
+            print(Fore.RED + "No se pudo conectar con ese token. revise su token e intente denuevo.")
+            input(Fore.YELLOW + "Preciona enter para ir al menu anterior...")
             TOKEN = token_management()
             if TOKEN:
                 bot.run(TOKEN)
         except Exception as e:
             print(Fore.RED + f"An unexpected error occurred: {e}")
-            input(Fore.YELLOW + "Press Enter to restart the menu...")
+            input(Fore.YELLOW + "preciona enter para restablecer el menu...")
             TOKEN = token_management()
             if TOKEN:
                 bot.run(TOKEN)
