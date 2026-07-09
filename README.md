@@ -16,30 +16,11 @@ En la pestaña Bot, en Privileged Gateway Intents, activa:
 - Server Members Intent
 - Message Content Intent
 
-## 3. Crear y activar entorno virtual
 
-**Linux / macOS:**
-```bash
-python3 -m venv cp
-source cp/bin/activate
-```
-
-**Windows:**
-```bash
-python -m venv cp
-cp\Scripts\activate
-```
-
-## 4. Instalar dependencias
+## 3. Ejecutar
 
 ```bash
-pip install -r requirements.txt
-```
-
-## 5. Ejecutar
-
-```bash
-python3 cp.py
+bash cp.sh
 ```
 
 Cuando lo pida, pega el token del paso 1.
